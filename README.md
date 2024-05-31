@@ -10,7 +10,7 @@ Neo4j, Expressjs, React/Redux, Nodejs
 
 ## clone or download
 ```terminal
-$ git clone https://github.com/amazingandyyy/mern.git
+$ git clone https://github.com/rohit-batra-1307/movieplaylistgenerator.git
 $ npm install or npm i 
 ```
 
