@@ -23,24 +23,21 @@ const MovieList = ({ setSelectedId }) => {
     setUserId(user?.result?.id);
 
     if (userId) {
-        // Set the userId state with the value retrieved from local storage
-        setUserId(userId);
-        // Dispatch the action with the retrieved userId
-        dispatch(getMovies(userId));
+      // Set the userId state with the value retrieved from local storage
+      setUserId(userId);
+      // Dispatch the action with the retrieved userId
+      dispatch(getMovies(userId));
     } else {
-        // If userId is null, you might want to clear the movies state here
-        // Assuming you have a CLEAR_MOVIES action type
-        
-        dispatch({ type: 'CLEAR_MOVIES' });
+      // If userId is null, you might want to clear the movies state here
+      // Assuming you have a CLEAR_MOVIES action type
+      dispatch({ type: 'CLEAR_MOVIES' });
     }
-}, [dispatch]);
-
-  
+  }, [dispatch]);
 
   const handleShowAll = () => {
     if (!searchTerm) {
       return;
-    }else{
+    } else {
       setLoading(true);
       axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=2f92b18f`)
         .then((response) => {
@@ -52,15 +49,14 @@ const MovieList = ({ setSelectedId }) => {
           console.error('Error fetching data:', error);
           setLoading(false);
         }); 
-      }
-    
+    }
   };
 
   const handleSearch = () => {
     if (!searchTermUser) {
       return ;
-    }else{
-    dispatch(getMovie(userId, searchTermUser));
+    } else {
+      dispatch(getMovie(userId, searchTermUser));
     }
   };
 
@@ -95,12 +91,8 @@ const MovieList = ({ setSelectedId }) => {
     try {
       dispatch(createMovie({ ...formValues, userId }))
         .then((response) => {
-    
-  
           if (response === 201) {
             message.success('Movie added to your playlist.');
-            // Refetch the user's playlist
-            // dispatch(getMovies(userId));
           } else if (response === 202) {
             message.info('Movie with the same name already exists.');
           }
@@ -112,30 +104,35 @@ const MovieList = ({ setSelectedId }) => {
       message.error('Failed to add movie to your playlist.');
     }
   };
-  
 
   return (
     <div>
       <div style={{ marginBottom: 20, textAlign: 'center', display: 'flex', justifyContent: 'space-between' }}>
-        <div>
-          <Input 
-            placeholder="Show Movies from OMDB" 
-            value={searchTerm} 
-            onChange={(e) => setSearchTerm(e.target.value)} 
-            style={{ width: 200, marginRight: 10 }}
-          />
-          <Button type="primary" onClick={handleShowAll} style={{ marginRight: 10 }}>Search</Button>
-        </div>
-        <div>
-          <Input 
-            placeholder="Show from User's Playlist" 
-            value={searchTermUser} 
-            onChange={(e) => setSearchTermUser(e.target.value)} 
-            style={{ width: 200, marginRight: 10 }}
-          />
-          <Button type="primary" onClick={handleSearch} style={{ marginRight: 10 }}>Search</Button>
-        </div>
-        <Button onClick={handleShowUser}>Show All User's Movies</Button>
+        {user && (
+          <div>
+            <Input 
+              placeholder="Show Movies from OMDB" 
+              value={searchTerm} 
+              onChange={(e) => setSearchTerm(e.target.value)} 
+              style={{ width: 200, marginRight: 10 }}
+            />
+            <Button type="primary" onClick={handleShowAll} style={{ marginRight: 10 }}>Search</Button>
+          </div>
+        )}
+        {user && (
+          <div>
+            <Input 
+              placeholder="Show from User's Playlist" 
+              value={searchTermUser} 
+              onChange={(e) => setSearchTermUser(e.target.value)} 
+              style={{ width: 200, marginRight: 10 }}
+            />
+            <Button type="primary" onClick={handleSearch} style={{ marginRight: 10 }}>Search</Button>
+          </div>
+        )}
+        {user && (
+          <Button onClick={handleShowUser}>Show All User's Movies</Button>
+        )}
       </div>
 
       <div className="container">
@@ -172,7 +169,6 @@ const MovieList = ({ setSelectedId }) => {
           </Row>
         )}
       </div>
-
       <Form
         form={form}
         labelCol={{ span: 6 }}
@@ -206,6 +202,8 @@ const MovieList = ({ setSelectedId }) => {
 };
 
 export default MovieList;
+
+
 
 
 
