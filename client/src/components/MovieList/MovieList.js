@@ -208,7 +208,6 @@ export default MovieList;
 
 
 
-
 // import React, { useState } from 'react';
 // import { Row, Col, Spin, Input, Button } from "antd";
 // import Movie from '../Movie';
