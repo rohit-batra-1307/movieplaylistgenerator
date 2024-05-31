@@ -68,14 +68,14 @@ $ npm i       // npm install packages
 $ npm run start // run it locally
 $ npm run build // this will build the server code to es5 js codes and generate a dist file
 ```
-
 # Screenshots of this project
 
 User visit public and Home page and search movie from OMDB Database
-![User visit public and Home page](https://drive.google.com/file/d/1zFGsdFqA6SpbAnCZcPaN85QdFXmP2fb8/view?usp=sharing)
+[![User visit public and Home page](https://drive.google.com/uc?export=view&id=1zFGsdFqA6SpbAnCZcPaN85QdFXmP2fb8)](https://drive.google.com/file/d/1zFGsdFqA6SpbAnCZcPaN85QdFXmP2fb8/view?usp=sharing)
 
 User can sign in or sign up
-![User can sign in or sign up](https://drive.google.com/file/d/1SC4qquVWv3lX9pmS_dEWr6sRgSVr5tK6/view?usp=drive_link)
+[![User can sign in or sign up](https://drive.google.com/uc?export=view&id=1SC4qquVWv3lX9pmS_dEWr6sRgSVr5tK6)](https://drive.google.com/file/d/1SC4qquVWv3lX9pmS_dEWr6sRgSVr5tK6/view?usp=drive_link)
 
 After signing in user can go to account route and see his movie playlist
-![After signing in user can go to account route](https://drive.google.com/file/d/1sgGfH4DsuOdv0SInmeyIm9qvy9XcP0KN/view?usp=sharing)
+[![After signing in user can go to account route](https://drive.google.com/uc?export=view&id=1sgGfH4DsuOdv0SInmeyIm9qvy9XcP0KN)](https://drive.google.com/file/d/1sgGfH4DsuOdv0SInmeyIm9qvy9XcP0KN/view?usp=sharing)
+
