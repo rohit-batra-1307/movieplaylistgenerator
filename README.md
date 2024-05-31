@@ -1,27 +1,17 @@
 <h1 align="center">
-🌐 MERN Stack
+🌐 MUSIC Playlist Generator
 </h1>
 <p align="center">
-MongoDB, Expressjs, React/Redux, Nodejs
+Neo4j, Expressjs, React/Redux, Nodejs
 </p>
 
-<p align="center">
-   <a href="https://github.com/amazingandyyy/mern/blob/master/LICENSE">
-      <img src="https://img.shields.io/badge/License-MIT-green.svg" />
-   </a>
-   <a href="https://circleci.com/gh/amazingandyyy/mern">
-      <img src="https://circleci.com/gh/amazingandyyy/mern.svg?style=svg" />
-   </a>
-</p>
 
-> MERN is a fullstack implementation in MongoDB, Expressjs, React/Redux, Nodejs.
-
-MERN stack is the idea of using Javascript/Node for fullstack web development.
+>  MUSIC Playlist Generator is a fullstack implementation in Neo4j, Expressjs, React/Redux, Nodejs.
 
 ## clone or download
 ```terminal
 $ git clone https://github.com/amazingandyyy/mern.git
-$ yarn # or npm i
+$ npm install or npm i 
 ```
 
 ## project structure
@@ -39,8 +29,8 @@ client/
 # Usage (run fullstack app on your machine)
 
 ## Prerequisites
-- [MongoDB](https://gist.github.com/nrollr/9f523ae17ecdbb50311980503409aeb3)
-- [Node](https://nodejs.org/en/download/) ^10.0.0
+- [Neo4j](https://neo4j.com/cloud/platform/aura-graph-database/)
+- [Node](https://nodejs.org/en/download/) 
 - [npm](https://nodejs.org/en/download/package-manager/)
 
 notice, you need client and server runs concurrently in different terminal session, in order to make them talk to each other
@@ -49,6 +39,7 @@ notice, you need client and server runs concurrently in different terminal sessi
 ```terminal
 $ cd client          // go to client folder
 $ yarn # or npm i    // npm install packages
+$ npm install react-scripts --save // To start scripts
 $ npm run start        // run it locally
 
 // deployment for client app
@@ -62,7 +53,7 @@ $ npm run start // this will run the files in docs, this behavior is exactly the
 
 run the script at the first level:
 
-(You need to add a JWT_SECRET in .env to connect to MongoDB)
+(You need to add a NEO4J_API in .env to connect to Neo4j)
 
 ```terminal
 // in the root level
@@ -74,17 +65,17 @@ $ cd server
 ```terminal
 $ cd server   // go to server folder
 $ npm i       // npm install packages
-$ npm run dev // run it locally
+$ npm run start // run it locally
 $ npm run build // this will build the server code to es5 js codes and generate a dist file
 ```
 
 # Screenshots of this project
 
-User visit public and Home page
-![User visit public and Home page](http://i.imgur.com/ORCGHHY.png)
+User visit public and Home page and search movie from OMDB Database
+![User visit public and Home page](https://drive.google.com/file/d/1zFGsdFqA6SpbAnCZcPaN85QdFXmP2fb8/view?usp=sharing)
 
 User can sign in or sign up
-![User can sign in or sign up](http://i.imgur.com/rrmbU5I.png)
+![User can sign in or sign up](https://drive.google.com/file/d/1SC4qquVWv3lX9pmS_dEWr6sRgSVr5tK6/view?usp=drive_link)
 
-After signing in user can go to account route and make request to token-protected API endpoint
-![After signing in user can go to account route](http://i.imgur.com/FzLB51u.png)
+After signing in user can go to account route and see his movie playlist
+![After signing in user can go to account route](https://drive.google.com/file/d/1sgGfH4DsuOdv0SInmeyIm9qvy9XcP0KN/view?usp=sharing)
