@@ -39,7 +39,7 @@ const MovieList = ({ setSelectedId }) => {
       return;
     } else {
       setLoading(true);
-      axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=2f92b18f`)
+      axios.get(`https://www.omdbapi.com/?s=${searchTerm}&apikey=de0819be`)
         .then((response) => {
           setPubMovies(response.data.Search);
           setShowUserMovies(false);
@@ -67,7 +67,7 @@ const MovieList = ({ setSelectedId }) => {
   };
 
   const handleAddMovie = (imdbID) => {
-    axios.get(`https://www.omdbapi.com/?i=${imdbID}&apikey=2f92b18f`)
+    axios.get(`https://www.omdbapi.com/?i=${imdbID}&apikey=de0819be`)
       .then((response) => {
         const data = response.data;
 
