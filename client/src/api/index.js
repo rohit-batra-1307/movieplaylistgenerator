@@ -1,9 +1,10 @@
 import axios from 'axios';
-
+//https://movieplaylistgenerator-6lh8lvjlv-rohitmca21duacins-projects.vercel.app/
+//https://movieplaylistgenerator.vercel.app/
 const storedProfile = localStorage.getItem("profile");
 const profile = storedProfile ? JSON.parse(storedProfile) : null;
 const api = axios.create({
-    baseURL: "https://movieplaylistgenerator.vercel.app/",
+    baseURL: "https://movieplaylistgenerator-6lh8lvjlv-rohitmca21duacins-projects.vercel.app/",
     headers: {
         'Content-Type': 'application/json',
         'Authorization': profile ? `Bearer ${profile.token}` : ''
